@@ -3,7 +3,7 @@ const mysql = require('mysql')
 
 const DB = require('../db/db')
 const router = express.Router()
-console.log(DB) 
+/* console.log(DB)  */
 express().use(express.json())
 
 const conectDB = mysql.createConnection({

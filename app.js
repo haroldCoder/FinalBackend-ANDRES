@@ -1,7 +1,7 @@
 const express = require('express')
 const mysql = require('mysql')
 const login = require('./router/login')
-
+const solicitudes = require('./router/solicitudes')
 
 const app = express()
 app.use(express.json())
@@ -15,6 +15,7 @@ app.use((req, res, next) => {
   });
   
 app.use('/login', login)
+app.use('/contactanos', solicitudes )
 
 
 module.exports = app
