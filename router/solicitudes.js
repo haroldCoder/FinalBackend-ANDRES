@@ -31,7 +31,7 @@ router.post('/createRequest', (req, res)=>{
     const sql = 'INSERT INTO contactame SET ?'
     const variableObject = {
         name: req.body.name,
-        lastname: req.body.lastname,
+        lastName: req.body.lastName,
         phone: req.body.phone,
         email: req.body.email,
         message: req.body.email
@@ -45,8 +45,8 @@ router.post('/createRequest', (req, res)=>{
 
 router.put('/editRequest/:idcontactame', (req, res)=>{
     const id = req.params.idcontactame
-    const {name, lastname, phone, email, message} = req.body
-    const sql = `UPDATE contactame SET name = '${name}', lastname = '${lastname}', 
+    const {name, lastName, phone, email, message} = req.body
+    const sql = `UPDATE contactame SET name = '${name}', lastname = '${lastName}', 
     phone='${phone}', email='${email}', message='${message}' WHERE idcontactame=${id}`
     conectDB.query(sql, error =>{
         if (error) throw error
