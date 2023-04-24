@@ -25,6 +25,7 @@ router.get('/', (req, res)=>{
             res.status(400).send('no requests received')
         }
     })
+    res.json({"message":  "ok"})
 })
 
 router.post('/createRequest', (req, res)=>{
