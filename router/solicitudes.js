@@ -17,15 +17,9 @@ const conectDB = mysql.createConnection({
 router.get('/', (req, res)=>{
     const sql = 'SELECT * FROM contactame'
     conectDB.query(sql, (error, result)=>{
-        if(error){
-            res.status(500).send(error)
-        } else if (result.length > 0){
-            res.status(200).json(result)
-        } else {
-            res.status(400).send('no requests received')
-        }
+        if(error) throw error;
+        res.json(result)
     })
-    res.json({"message":  "ok"})
 })
 
 router.post('/createRequest', (req, res)=>{
