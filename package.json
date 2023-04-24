@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon ./Bin/bin",
+    "start": "node ./Bin/bin",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,5 +15,6 @@
     "express": "^4.18.2",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.22"
+  
   }
 }
