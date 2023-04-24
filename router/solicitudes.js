@@ -3,16 +3,22 @@ const router = express.Router()
 
 const mysql = require('mysql')
 
-const DB = require('../db/db')
+const {
+    DB_HOST,
+    DB_USER,
+    DB_PASSWORD,
+    DB_NAME,
+    DB_PORT
+} = require('../db/db')
 
 express().use(express.json())
 
 const conectDB = mysql.createConnection({
-    host: DB.DB_HOST,
-    user: DB.DB_USER,
-    password: DB.DB_PASSWORD,
-    database: DB.DB_NAME,
-    port: DB.DB_PORT
+    host: DB_HOST,
+    user: DB_USER,
+    password: DB_PASSWORD,
+    database: DB_NAME,
+    port: DB_PORT
 })
 
 conectDB.connect((err) => {
