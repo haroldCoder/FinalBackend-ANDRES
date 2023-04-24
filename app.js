@@ -1,5 +1,4 @@
 const express = require('express')
-const mysql = require('mysql')
 const login = require('./router/login')
 const solicitudes = require('./router/solicitudes')
 
