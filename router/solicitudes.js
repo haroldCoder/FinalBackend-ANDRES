@@ -11,7 +11,8 @@ const conectDB = mysql.createConnection({
     host: DB.DB_HOST,
     user: DB.DB_USER,
     password: DB.DB_PASSWORD,
-    database: DB.DB_NAME
+    database: DB.DB_NAME,
+    port: DB.DB_PORT
 })
 
 conectDB.connect((err) => {
