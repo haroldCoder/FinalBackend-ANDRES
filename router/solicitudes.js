@@ -14,6 +14,11 @@ const conectDB = mysql.createConnection({
     database: DB.DB_NAME
 })
 
+conectDB.connect((err) => {
+    if(err) throw err;
+    console.log('Conexión exitosa a la base de datos');
+});
+
 router.get('/', (req, res)=>{
     const sql = 'SELECT * FROM contactame'
     conectDB.query(sql, (error, result)=>{
